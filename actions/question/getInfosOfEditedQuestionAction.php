@@ -19,7 +19,9 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
             $question_title = $questionInfos['titre'];
             $question_description = $questionInfos['description'];
             $question_content = $questionInfos['contenu'];
-            $question_date = $questionInfos['date_publication'];
+
+            $question_description = str_replace('<br />','', $question_description);
+            $question_content = str_replace('<br />','', $question_content);
 
         } else {
             $errorMsg = "Vous n'êtes pas l'auteur de cette question";
