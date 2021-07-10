@@ -18,14 +18,16 @@
             ?>
             <div class="card">
                 <h5 class="card-header">
-                    <?php echo $question['titre']; ?>
+                    <a href="article.php?id=<?php echo $question['id']; ?>">
+                        <?php echo $question['titre']; ?>
+                    </a>
                 </h5>
                 <div class="card-body">
 
                     <p class="card-text">
                         <?= $question['description']; ?>
                     </p>
-                    <a href="#" class="btn btn-primary">Accéder à la question</a>
+                    <a href="article.php?id=<?php echo $question['id']; ?>" class="btn btn-primary">Accéder à la question</a>
                     <a href="edit-question.php?id=<?= $question['id']; ?>" class="btn btn-warning">Modifier la question</a>
                     <a href="actions/question/deleteQuestionAction.php?id=<?= $question['id']; ?>" class="btn btn-danger">Supprimer la question</a>
                 </div>
